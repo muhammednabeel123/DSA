@@ -108,6 +108,19 @@ set(index,values){
 
     }
 
+    remove(index){
+        if(index === this.length - 1 )return this.pop()
+        if(index === 0) return this.shift()
+        if(index < 0 || index > this.length ) return  false
+
+        let before = this.get(index -1)
+        temp = before.next
+        before.next = temp.next
+        temp.next = null
+        this.length === null
+        return true
+    }
+
 }
 
 const linklist = new LinkedList(10)
@@ -118,6 +131,7 @@ linklist.push(43)
 linklist.pop()
 linklist.unshift(15)
 linklist.shift()
+
 console.log(linklist.insert(3,23));
 
 console.log(linklist);
