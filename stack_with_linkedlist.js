@@ -14,14 +14,23 @@ class Stack{
 
     push(value){
         const newNode = new Node(value)
-        if(!this.head) {this.top = newNode}else{
-            newNode.next = this.head
-            this.head = newNode
+        if(!this.top) {this.top = newNode}else{
+            newNode.next = this.top
+            this.top = newNode
             
         } 
         this.length++ 
         return this
 
+    }
+
+    pop(){
+        if(!this.top ) return undefined
+        let prev = this.top
+        this.top = this.top.next
+        prev.next = null 
+
+      
     }
 
 }
