@@ -96,6 +96,17 @@ class BST {
 
     }
 
+    min(root){
+        if(!root.left){
+            
+            return root.value
+        }else{
+            return this.max(root.left)
+        }
+    }
+
+    
+
 
 }
 
@@ -106,8 +117,9 @@ bst.insert(5)
 bst.insert(3)
 bst.insert(70)
 bst.insert(100)
-bst.Bfs()
-console.log(bst.search(bst.root,10));
 
-bst.postOrder(bst.root)
-console.log(bst);
+console.log(bst.min(bst.root));
+// console.log(bst.search(bst.root,10));
+
+// bst.postOrder(bst.root)
+// console.log(bst);
