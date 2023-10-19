@@ -55,6 +55,47 @@ class BST {
         
     }
 
+    preOrder(root){
+        if(root){
+            console.log(root.value);
+            this.preOrder(root.left)
+            this.preOrder(root.right)
+
+        }
+    }
+
+    inOrder(root){
+        if(root){
+            this.inOrder(root.left)
+            console.log(root.value);
+            this.inOrder(root.right)
+        }
+    }
+
+    postOrder(root){
+        if(root){
+            this.inOrder(root.left)
+            this.inOrder(root.right)
+            console.log(root.value);
+        }
+    }
+
+    Bfs(){
+        let queue = []
+        queue.push(this.root)
+        while(queue.length){
+            let curr = queue.shift()
+            console.log(curr.value)
+            if(curr.left){
+                queue.push(curr.left)
+            }
+            if(curr.right){
+                queue.push(curr.right)
+            }
+        }
+
+    }
+
 
 }
 
@@ -65,6 +106,8 @@ bst.insert(5)
 bst.insert(3)
 bst.insert(70)
 bst.insert(100)
+bst.Bfs()
 console.log(bst.search(bst.root,10));
-console.log(bst.search(bst.root,));
+
+bst.postOrder(bst.root)
 console.log(bst);
