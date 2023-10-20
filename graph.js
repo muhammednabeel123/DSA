@@ -45,7 +45,7 @@ class Graph {
         while(stack.length){
             curr = stack.pop()
             result.push(curr)
-            this.adjacencyList[vertex].forEach(element => {
+            this.adjacencyList[curr].forEach(element => {
                 if(!visited[element]){
                     visited[element] = true
                     stack.push(element)

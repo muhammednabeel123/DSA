@@ -145,6 +145,6 @@ linklist.pop()
 linklist.unshift(15)
 linklist.shift()
 
-console.log(linklist.insert(3,23));
+console.log(linklist.get(5));
 
 console.log(linklist.reverse);

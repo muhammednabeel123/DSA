@@ -33,6 +33,9 @@ class Heap  {
 
     shiftup(curr){
         let parent = this.parent(curr)
+        if(this.heap[parent] > this.heap[child]){
+            
+        }
        
     }
 

@@ -105,9 +105,6 @@ class BST {
         }
     }
 
-    
-
-
 }
 
 const bst = new BST()
